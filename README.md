@@ -4,4 +4,4 @@ Personal portfolio site for Disha Ghatalia — Senior Frontend Engineer, Technic
 
 🌐 **Live:** https://disha-ghatalia.github.io
 
-**Built with:** React, Vite, custom brand design system (periwinkle + dusty rose)
+**Built with:** React, Vite, custom brand design system
