@@ -43,7 +43,7 @@ export const projects = [
   {
     id: 'fintech',
     title: 'Fintech Platform Migration',
-    org: 'Valtech · regulated fintech client',
+    org: 'Valtech · fintech client',
     description:
       '18-month migration of a fintech microsite ecosystem to Optimizely with a 10-person cross-functional team. Built 20+ reusable React/TypeScript components and 8 production pages — code splitting, lazy loading, and smarter data fetching pushed Lighthouse from 60 to 80+.',
     tags: ['React', 'TypeScript', 'Optimizely', 'WCAG', 'Performance'],
@@ -62,7 +62,7 @@ export const projects = [
   {
     id: 'design-system',
     title: 'Design System & Storybook Library',
-    org: 'Valtech practice-wide',
+    org: 'Practice-wide',
     description:
       'Established Storybook-documented React/TypeScript component patterns and frontend standards — accessibility, performance budgets, naming — adopted by 8+ engineers and reused across client projects.',
     tags: ['Storybook', 'Design Systems', 'TypeScript', 'a11y'],
@@ -71,7 +71,7 @@ export const projects = [
   {
     id: 'ai-workflows',
     title: 'AI-Assisted Dev Workflows',
-    org: 'Valtech engineering practice',
+    org: 'Engineering practice',
     description:
       'Designed the team’s AI adoption strategy: prompt patterns for code generation and review, guardrails for regulated client work, and practices that improved code consistency at the scale of 200+ reviews a year.',
     tags: ['Prompt Engineering', 'AI Tooling', 'Code Review', 'Enablement'],
