@@ -1,0 +1,48 @@
+/* disha-brand — design tokens
+   Periwinkle + Dusty Rose. See SKILL.md for usage rules. */
+
+:root {
+  /* color */
+  --color-primary: #4D5B9E;
+  --color-primary-hover: #3E4A85;
+  --color-primary-soft: #7D88BE;
+  --color-accent: #D9A6B0;        /* decorative only — never body text */
+  --color-accent-deep: #B4707E;   /* large text (24px+), badges, chart bars */
+  --color-accent-text: #8F4E5C;   /* rose that may carry body-size text */
+  --color-background: #F6F6FA;
+  --color-surface: #FFFFFF;
+  --color-surface-border: #E0E0EC;
+  --color-text: #2D3045;
+  --color-text-muted: #5F6483;
+
+  /* focus ring */
+  --focus-ring: 0 0 0 3px rgba(77, 91, 158, 0.4);
+
+  /* type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* shape */
+  --radius-card: 18px;
+  --radius-pill: 999px;
+
+  /* elevation */
+  --shadow-card: 0 2px 24px rgba(45, 48, 69, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #9AA5D6;
+    --color-primary-hover: #B3BCE3;
+    --color-primary-soft: #6F7BAF;
+    --color-accent: #B4707E;
+    --color-accent-deep: #D9A6B0;
+    --color-accent-text: #E4B9C2;
+    --color-background: #1D1F2E;
+    --color-surface: #262940;
+    --color-surface-border: #383C58;
+    --color-text: #ECEDF4;
+    --color-text-muted: #A6AAC4;
+  }
+}
