@@ -208,6 +208,20 @@ body {
   letter-spacing: 0.04em;
 }
 
+.switch-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+  margin-bottom: 10px;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
 .persona-switch {
   display: inline-flex;
   gap: 6px;
@@ -245,6 +259,8 @@ body {
 .persona-btn.active {
   background: var(--color-primary);
   color: var(--on-primary);
+  box-shadow: 0 4px 18px rgba(77, 91, 158, 0.35);
+  transform: scale(1.06);
 }
 .persona-btn.active kbd { border-color: currentColor; }
 

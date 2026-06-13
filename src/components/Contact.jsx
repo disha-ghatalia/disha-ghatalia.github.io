@@ -17,6 +17,9 @@ export default function Contact({ persona }) {
           <a className="btn btn-ghost" href={contact.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
+          <a className="btn btn-ghost" href={contact.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
     </section>

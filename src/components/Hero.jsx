@@ -8,6 +8,7 @@ export default function Hero({ persona, onSwitch }) {
 
         {/* ── left column: all text content ── */}
         <div className="hero-content">
+          <p className="switch-label">✦ switch view to see a different side of me</p>
           <div className="persona-switch" role="tablist" aria-label="Choose how to view Disha's work">
             {personaOrder.map((key) => {
               const p = personas[key]

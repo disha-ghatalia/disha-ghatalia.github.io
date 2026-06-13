@@ -154,5 +154,6 @@ export const contact = {
   location: 'Phoenix, AZ',
   email: 'disha.ghatalia@gmail.com',
   linkedin: 'https://www.linkedin.com/in/disha-ghatalia',
+  github: 'https://github.com/disha-ghatalia',
   resume: '/Disha_Ghatalia_Resume.docx',
 }
