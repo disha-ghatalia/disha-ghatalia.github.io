@@ -1,7 +1,7 @@
 // custom.scss — BEM component styles.
 // Layout, spacing, typography → @apply with Tailwind utilities.
 // Colors, fonts → raw CSS with var(--*) brand tokens.
-@import "tailwindcss";
+@reference "tailwindcss";
 // Animations, pseudo-elements, complex values → raw CSS.
 
 // ── Keyframes ─────────────────────────────────────────────────────────────────
@@ -318,7 +318,7 @@ button:focus-visible {
 
 .hero__heading {
   @apply font-bold leading-tight mb-5;
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-size: clamp(4rem, 5vw, 3.25rem);
   font-family: var(--font-display);
   color: var(--color-text);
 }
@@ -401,19 +401,20 @@ button:focus-visible {
 
 // ── Stats ─────────────────────────────────────────────────────────────────────
 .stats {
-  @apply py-16;
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-surface-border);
-  border-bottom: 1px solid var(--color-surface-border);
+  @apply pb-16;
 }
 
 .stats__grid {
-  @apply grid gap-8;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .stat {
-  @apply flex flex-col items-center text-center;
+  @apply flex flex-col items-center text-center py-6 px-7;
+  background: var(--color-surface);
+  transition: border-color 0.3s ease;
+  border-radius: 18px;
+  border: 1px solid var(--color-surface-border);
 }
 
 .stat__number {
@@ -429,7 +430,7 @@ button:focus-visible {
 
 // ── Projects ──────────────────────────────────────────────────────────────────
 .projects {
-  @apply py-20;
+  @apply py-16;
 }
 
 .projects__hint {
@@ -468,12 +469,12 @@ button:focus-visible {
 
 .card__org {
   @apply text-xs font-semibold tracking-widest uppercase;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   font-family: var(--font-mono);
 }
 
 .card__title {
-  @apply text-lg font-bold;
+  @apply text-xl font-bold;
   font-family: var(--font-display);
   color: var(--color-text);
 }
@@ -696,7 +697,7 @@ button:focus-visible {
 
 // ── Contact ───────────────────────────────────────────────────────────────────
 .contact {
-  @apply py-24 text-center;
+  @apply py-16 text-center;
 }
 
 .contact__heading {
