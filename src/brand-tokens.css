@@ -14,6 +14,7 @@
   --color-surface-border: #E0E0EC;
   --color-text: #2D3045;
   --color-text-muted: #5F6483;
+  --color-on-primary: #FFFFFF;     /* text/icons placed on a primary-colored surface */
 
   /* focus ring */
   --focus-ring: 0 0 0 3px rgba(77, 91, 158, 0.4);

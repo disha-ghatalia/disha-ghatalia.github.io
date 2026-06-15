@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 
 // returns [ref, inView] — true once the element scrolls into the viewport
-export default function useInView(threshold = 0.25) {
-  const ref = useRef(null)
+export default function useInView(threshold = 0.25): [React.RefObject<Element | null>, boolean] {
+  const ref = useRef<Element | null>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {

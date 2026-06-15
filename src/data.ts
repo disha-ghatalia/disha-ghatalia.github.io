@@ -1,6 +1,73 @@
 // All site content lives here — edit this file to update the site.
 
-export const personas = {
+export interface Persona {
+  key: string
+  label: string
+  shortcut: string
+  eyebrow: string
+  headline: [string, string]
+  sub: string
+  focus: string[]
+}
+
+export interface Stat {
+  value: number
+  suffix: string
+  label: string
+}
+
+export interface GaugeMetric {
+  type: 'gauge'
+  from: number
+  to: number
+  label: string
+}
+
+export interface NumberMetric {
+  type: 'number'
+  value: string
+  label: string
+}
+
+export interface Project {
+  id: string
+  title: string
+  org: string
+  description: string
+  tags: string[]
+  metric: GaugeMetric | NumberMetric
+  featured?: boolean
+}
+
+export interface Job {
+  role: string
+  org: string
+  where: string
+  when: string
+  note: string
+}
+
+export interface EducationEntry {
+  degree: string
+  school: string
+  year: string
+}
+
+export interface SkillGroup {
+  group: string
+  items: string[]
+}
+
+export interface ContactInfo {
+  name: string
+  location: string
+  email: string
+  linkedin: string
+  github: string
+  resume: string
+}
+
+export const personas: Record<string, Persona> = {
   engineer: {
     key: 'engineer',
     label: 'Frontend Engineer',
@@ -30,16 +97,16 @@ export const personas = {
   },
 }
 
-export const personaOrder = ['engineer', 'leader', 'ai']
+export const personaOrder: string[] = ['engineer', 'leader', 'ai']
 
-export const stats = [
+export const stats: Stat[] = [
   { value: 10, suffix: '+', label: 'years building for the web' },
   { value: 200, suffix: '+', label: 'PRs reviewed per year' },
   { value: 40, suffix: '+', label: 'client sites shipped' },
   { value: 12, suffix: '', label: 'engineers led at once' },
 ]
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 'fintech',
     title: 'Fintech Platform Migration',
@@ -73,7 +140,7 @@ export const projects = [
     title: 'AI-Assisted Dev Workflows',
     org: 'Engineering practice',
     description:
-      'Designed the team’s AI adoption strategy: prompt patterns for code generation and review, guardrails for regulated client work, and practices that improved code consistency at the scale of 200+ reviews a year.',
+      "Designed the team's AI adoption strategy: prompt patterns for code generation and review, guardrails for regulated client work, and practices that improved code consistency at the scale of 200+ reviews a year.",
     tags: ['Prompt Engineering', 'AI Tooling', 'Code Review', 'Enablement'],
     metric: { type: 'number', value: '200+', label: 'AI-augmented reviews / yr' },
   },
@@ -97,7 +164,7 @@ export const projects = [
   },
 ]
 
-export const experience = [
+export const experience: Job[] = [
   {
     role: 'Senior Frontend Engineer · Tech Lead',
     org: 'Valtech',
@@ -135,13 +202,13 @@ export const experience = [
   },
 ]
 
-export const education = [
+export const education: EducationEntry[] = [
   { degree: 'Executive MBA, Operational Effectiveness', school: 'Ottawa University', year: '2025' },
   { degree: 'MPS, Informatics', school: 'Northeastern University', year: '2020' },
   { degree: 'B.Sc, Information Technology', school: 'University of Mumbai', year: '2009' },
 ]
 
-export const skills = [
+export const skills: SkillGroup[] = [
   { group: 'Core', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'HTML5', 'CSS3'] },
   { group: 'UI & Systems', items: ['Storybook', 'Tailwind CSS', 'SCSS', 'Material UI', 'PrimeReact', 'Chart.js'] },
   { group: 'Quality', items: ['Jest', 'Lighthouse', 'WCAG / a11y', 'Code Review', 'Core Web Vitals'] },
@@ -149,7 +216,7 @@ export const skills = [
   { group: 'Ways of working', items: ['AI-assisted development', 'Agile/Scrum', 'Azure DevOps', 'CI/CD', 'Vercel', 'Hiring & mentorship'] },
 ]
 
-export const contact = {
+export const contact: ContactInfo = {
   name: 'Disha Ghatalia',
   location: 'Phoenix, AZ',
   email: 'disha.ghatalia@gmail.com',

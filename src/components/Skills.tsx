@@ -1,4 +1,4 @@
-import { skills } from '../data.js'
+import { skills } from '../data.ts'
 
 const marqueeItems = [
   'React', 'TypeScript', 'Next.js', 'Storybook', 'WCAG', 'Lighthouse',
@@ -7,28 +7,27 @@ const marqueeItems = [
 
 export default function Skills() {
   return (
-    <section id="skills">
+    <section className="skills" id="skills">
       <div className="marquee" aria-hidden="true">
-        <div className="marquee-inner">
+        <div className="marquee__inner">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i}>
-              {item} <span className="dot">✦</span>
+            <span key={i} className="marquee__item">
+              {item} <span className="marquee__dot">✦</span>
             </span>
           ))}
         </div>
       </div>
 
-      <div className="wrap" style={{ paddingTop: 70 }}>
-        <div className="eyebrow">Toolbox</div>
+      <div className="wrap skills__content">
+        <p className="eyebrow">Toolbox</p>
         <h2 className="section-title">Skills</h2>
+
         {skills.map((group) => (
-          <div className="skill-group" key={group.group}>
-            <div className="g-name">{group.group}</div>
-            <div className="chips">
+          <div key={group.group} className="skill-group">
+            <p className="skill-group__name">{group.group}</p>
+            <div className="skill-group__chips">
               {group.items.map((item) => (
-                <span className="chip" key={item}>
-                  {item}
-                </span>
+                <span key={item} className="chip">{item}</span>
               ))}
             </div>
           </div>

@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
-import { personas, personaOrder } from './data.js'
-import Nav from './components/Nav.jsx'
-import BgBlobs from './components/BgBlobs.jsx'
-import Hero from './components/Hero.jsx'
-import Stats from './components/Stats.jsx'
-import Projects from './components/Projects.jsx'
-import Experience from './components/Experience.jsx'
-import Skills from './components/Skills.jsx'
-import Contact from './components/Contact.jsx'
+import { personas, personaOrder } from './data.ts'
+import Nav from './components/Nav.tsx'
+import BgBlobs from './components/BgBlobs.tsx'
+import Hero from './components/Hero.tsx'
+import Stats from './components/Stats.tsx'
+import Projects from './components/Projects.tsx'
+import Experience from './components/Experience.tsx'
+import Skills from './components/Skills.tsx'
+import Contact from './components/Contact.tsx'
 
 export default function App() {
   const [personaKey, setPersonaKey] = useState('engineer')
   const persona = personas[personaKey]
-  const glowRef = useRef(null)
+  const glowRef = useRef<HTMLDivElement>(null)
 
-  // keyboard shortcuts 1/2/3 switch personas
   useEffect(() => {
-    const onKey = (e) => {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return
       const match = personaOrder.find((k) => personas[k].shortcut === e.key)
       if (match) setPersonaKey(match)
     }
@@ -25,9 +25,8 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  // cursor glow follows the mouse
   useEffect(() => {
-    const onMove = (e) => {
+    const onMove = (e: PointerEvent) => {
       if (glowRef.current) {
         glowRef.current.style.left = `${e.clientX}px`
         glowRef.current.style.top = `${e.clientY}px`
@@ -42,7 +41,7 @@ export default function App() {
       <div className="glow" ref={glowRef} aria-hidden="true" />
       <BgBlobs />
       <Nav />
-      <main>
+      <main className="app__main">
         <Hero persona={persona} onSwitch={setPersonaKey} />
         <Stats />
         <Projects persona={persona} />
@@ -50,9 +49,9 @@ export default function App() {
         <Skills />
         <Contact persona={persona} />
       </main>
-      <footer>
+      <footer className="footer">
         <div className="wrap">
-          Designed & built by <b>Disha Ghatalia</b> · React + Vite · Press 1 / 2 / 3 to switch hats
+          Designed & built by <b>Disha Ghatalia</b> · React + Vite + Tailwind · Press 1 / 2 / 3 to switch hats
         </div>
       </footer>
     </div>
