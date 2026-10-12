@@ -74,7 +74,7 @@ export const personas: Record<string, Persona> = {
     shortcut: '1',
     eyebrow: 'Senior Frontend Engineer',
     headline: ['I build interfaces', 'that feel alive.'],
-    sub: '10+ years crafting fast, accessible React & TypeScript products across fintech, enterprise SaaS, and high-traffic platforms. Performance budgets, design systems, and WCAG are my home turf.',
+    sub: '10+ years crafting fast, accessible React & TypeScript products across regulated fintech, enterprise, and high-traffic platforms. Performance budgets, design systems, and WCAG are my home turf.',
     focus: ['fintech', 'dashboards', 'design-system'],
   },
   leader: {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     title: 'Fintech Platform Migration',
     org: 'Valtech · fintech client',
     description:
-      '18-month migration of a fintech microsite ecosystem to Optimizely with a 10-person cross-functional team. Built 20+ reusable React/TypeScript components and 8 production pages — code splitting, lazy loading, and smarter data fetching pushed Lighthouse from 60 to 80+.',
+      '18-month migration of a fintech microsite ecosystem to Optimizely with a 10-person cross-functional team. Built 20+ reusable React/TypeScript components and 30+ page templates — code splitting, lazy loading, and smarter data fetching pushed Lighthouse from 60 to 80+.',
     tags: ['React', 'TypeScript', 'Optimizely', 'WCAG', 'Performance'],
     metric: { type: 'gauge', from: 60, to: 80, label: 'Lighthouse score' },
     featured: true,
@@ -131,18 +131,18 @@ export const projects: Project[] = [
     title: 'Design System & Storybook Library',
     org: 'Practice-wide',
     description:
-      'Established Storybook-documented React/TypeScript component patterns and frontend standards — accessibility, performance budgets, naming — adopted by 8+ engineers and reused across client projects.',
+      'Established Storybook-documented React/TypeScript component patterns and frontend standards — accessibility, performance budgets, naming — adopted by 6+ engineers and reused across client projects.',
     tags: ['Storybook', 'Design Systems', 'TypeScript', 'a11y'],
-    metric: { type: 'number', value: '8+', label: 'engineers building on it' },
+    metric: { type: 'number', value: '6+', label: 'engineers building on it' },
   },
   {
     id: 'ai-workflows',
     title: 'AI-Assisted Dev Workflows',
     org: 'Engineering practice',
     description:
-      "Designed the team's AI adoption strategy: prompt patterns for code generation and review, guardrails for regulated client work, and practices that improved code consistency at the scale of 200+ reviews a year.",
+      'Established team practices for code review and AI-assisted development workflows across concurrent client engagements.',
     tags: ['Prompt Engineering', 'AI Tooling', 'Code Review', 'Enablement'],
-    metric: { type: 'number', value: '200+', label: 'AI-augmented reviews / yr' },
+    metric: { type: 'number', value: '200+', label: 'PRs reviewed / yr' },
   },
   {
     id: 'northeastern',
@@ -209,7 +209,7 @@ export const education: EducationEntry[] = [
 ]
 
 export const skills: SkillGroup[] = [
-  { group: 'Core', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'HTML5', 'CSS3'] },
+  { group: 'Core', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Vite', 'HTML5', 'CSS3'] },
   { group: 'UI & Systems', items: ['Storybook', 'Tailwind CSS', 'SCSS', 'Material UI', 'PrimeReact', 'Chart.js'] },
   { group: 'Quality', items: ['Jest', 'Lighthouse', 'WCAG / a11y', 'Code Review', 'Core Web Vitals'] },
   { group: 'Platforms', items: ['Optimizely', 'AEM', 'Contentstack', 'WordPress', 'GraphQL'] },
