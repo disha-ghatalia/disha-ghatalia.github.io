@@ -222,5 +222,5 @@ export const contact: ContactInfo = {
   email: 'disha.ghatalia@gmail.com',
   linkedin: 'https://www.linkedin.com/in/disha-ghatalia',
   github: 'https://github.com/disha-ghatalia',
-  resume: '/Disha_Ghatalia_Resume.docx',
+  resume: '/Disha_Ghatalia_Resume.pdf',
 }
