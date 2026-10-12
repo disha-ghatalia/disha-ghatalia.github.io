@@ -91,8 +91,8 @@ export const personas: Record<string, Persona> = {
     label: 'AI Workflow Engineer',
     shortcut: '3',
     eyebrow: 'AI-Assisted Development · Prompt Engineering',
-    headline: ['I make teams faster', 'with AI.'],
-    sub: 'I design and roll out AI-assisted development workflows that actually stick — prompt patterns, review automation, and adoption strategy across whole engineering practices. 200+ PR reviews a year, increasingly co-piloted.',
+    headline: ['I help teams', 'use AI well.'],
+    sub: 'I set code review standards and AI-assisted development practices for engineering teams, so AI speeds up delivery without lowering quality. 200+ PRs reviewed a year across concurrent client engagements.',
     focus: ['ai-workflows', 'design-system', 'dashboards'],
   },
 }
